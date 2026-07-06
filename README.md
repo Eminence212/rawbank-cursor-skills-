@@ -15,6 +15,7 @@ Chaque skill embarque tout le détail technique dans `references/*.md` :
 - Matrice RBAC complète, endpoints API, codes `ERR-*`
 - Thèmes Mantine, variables `--app-*` / `--kiosk-*`
 - Patterns pages, composants kiosk, MFA
+- Plan LDAP/LDAPS GO-PASS (V30 planifié, MFA conservé)
 
 **Aucun clone** des repos `stockgopass` ou `digibranch` n'est requis pour que l'agent s'appuie sur ces skills.
 
@@ -81,10 +82,10 @@ rawbank-cursor-skills/
 ├── install-rawbank-skills.sh
 ├── rawbank-backend/
 │   ├── SKILL.md
-│   └── references/          # 11 fichiers
+│   └── references/          # 12 fichiers
 └── rawbank-frontend/
     ├── SKILL.md
-    └── references/          # 12 fichiers
+    └── references/          # 13 fichiers
 ```
 
 Ne pas inclure dans le repo GitHub skills : les anciens `gopass-backend/`, `gopass-frontend/`, ni les skills tiers (`mantine-custom-components`, etc.) — ils restent optionnels dans le monorepo stockgopass.
@@ -117,8 +118,9 @@ Les skills complémentaires utiles (installés séparément) :
 |---------|--------|
 | `gopass-api-patterns.md` | Controllers, DTO, `ApiResponse` |
 | `gopass-rbac-scope.md` | Périmètre ventes/stocks/appro |
-| `gopass-migrations-rbac.md` | Flyway V1–V29, matrice IAM |
-| `gopass-services-env.md` | Services, variables env |
+| `gopass-migrations-rbac.md` | Flyway V1–V30 (V30 planifié), matrice IAM |
+| `gopass-services-env.md` | Services, variables env, LDAP planifié |
+| `gopass-auth-ldap-plan.md` | Plan LDAP/LDAPS + MFA (backend, non livré) |
 | `digibranch-security.md` | Filtres kiosk, rate limit |
 | `digibranch-api-endpoints.md` | REST `/kiosk/v1` + DTOs |
 | `digibranch-domain-flows.md` | Auth OTP, PDF, Flyway V1–V7 |
@@ -135,6 +137,7 @@ Les skills complémentaires utiles (installés séparément) :
 | `gopass-pages-pattern.md` | Listes, pagination URL |
 | `gopass-ui-components.md` | Composants, badges, mutations |
 | `gopass-lib-auth-mfa.md` | MFA parité backend |
+| `gopass-auth-ldap-frontend.md` | LDAP/LDAPS — impact UI (plan V30) |
 | `digibranch-design-system.md` | Tokens marque kiosk |
 | `digibranch-theme-styles.md` | Variables `--kiosk-*` |
 | `digibranch-kiosk-components.md` | Catalogue 79 composants |

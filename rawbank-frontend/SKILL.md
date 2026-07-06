@@ -65,7 +65,8 @@ routes/              → AppRoutes, ProtectedRoute, AccessRoute
 | `TotpEnrollmentGuard` | Force `/mfa/enroll` |
 | `SettingsLayout` | ADMIN + AGENCE |
 
-MFA parité : voir [references/gopass-lib-auth-mfa.md](references/gopass-lib-auth-mfa.md)
+MFA parité : voir [references/gopass-lib-auth-mfa.md](references/gopass-lib-auth-mfa.md)  
+LDAP/LDAPS (livré V30–V31) : [references/gopass-auth-ldap-frontend.md](references/gopass-auth-ldap-frontend.md)
 
 ### Pattern liste
 
@@ -111,6 +112,7 @@ npm run dev:front   # 5173, proxy /api → 8080
 - [references/gopass-pages-pattern.md](references/gopass-pages-pattern.md)
 - [references/gopass-ui-components.md](references/gopass-ui-components.md)
 - [references/gopass-lib-auth-mfa.md](references/gopass-lib-auth-mfa.md)
+- [references/gopass-auth-ldap-frontend.md](references/gopass-auth-ldap-frontend.md) — LDAP/LDAPS + MFA (plan V30)
 - [references/gopass-theme-styles.md](references/gopass-theme-styles.md)
 - [references/paths-convention.md](references/paths-convention.md)
 

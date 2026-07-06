@@ -23,7 +23,8 @@
 | `ExportService` | Export CSV/PDF |
 | `AuditService` | Écriture `audit_logs` |
 | `AuditQueryService` | Lecture journal audit |
-| `AdminUserService` | CRUD users, MFA admin |
+| `AdminUserService` | CRUD users, MFA admin, `authProvider` LOCAL/LDAP |
+| `LdapSettingsService` | Config annuaire LDAP (Oracle `ldap_settings`), chiffrement bind |
 | `AdminOrganizationService` | Sites org |
 | `AdminProductService` | Produits GO-PASS |
 | `AdminThresholdService` | Seuils alertes stock |
@@ -172,6 +173,18 @@ Frontend : `apiGet`, `apiPagedGet` déballent `{ data, meta }`.
 ## Audit — actions courantes
 
 `SALE.CREATE`, `SALE.CANCEL`, `SALE.COLLECT`, `STOCK.MOVEMENT`, `SUPPLY.CREATE`, `SUPPLY.CONFIRM`, `USER.CREATE`, `USER.MFA_UPDATE`
+
+## LDAP / Active Directory (livré V30–V31)
+
+Config serveur : table **`ldap_settings`** + UI **`/settings/ldap`**. Voir [gopass-auth-ldap-plan.md](gopass-auth-ldap-plan.md).
+
+| Variable | Défaut | Description |
+|----------|--------|-------------|
+| `LDAP_SETTINGS_ENCRYPTION_KEY` | *(dev)* | Chiffrement secrets bind/truststore en base (min. 32 car.) |
+
+Paramètres annuaire (URL, DN, bind, filtre, `auth_mode`) : **Oracle + UI admin**, pas `.env` prod.
+
+Labo validé : `ldap://192.168.64.10:389`, bind `economa@develop.local`, `(sAMAccountName={0})`.
 
 ## Commandes dev
 

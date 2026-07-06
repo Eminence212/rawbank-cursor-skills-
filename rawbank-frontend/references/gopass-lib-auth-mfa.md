@@ -15,6 +15,17 @@
 
 Toute modification → mettre à jour **les deux** + tests `mfa-requirements.test.ts`, `AuthServiceLoginTest`, `MfaServiceTest`.
 
+## LDAP/LDAPS (livré V30–V31)
+
+L'authentification annuaire remplace **uniquement** la vérification mot de passe (`POST /auth/login`). **Aucun changement** dans `mfa-requirements.ts` :
+
+- Mêmes statuts `AUTHENTICATED` / `MFA_REQUIRED`
+- Mêmes guards `TotpEnrollmentGuard`, `MfaPage`, `MfaEnrollPage`
+- MFA TOTP et OTP e-mail **obligatoires** pour comptes LDAP
+- Login : e-mail ou sAMAccountName (champ API `email`)
+
+Référence : [gopass-auth-ldap-frontend.md](gopass-auth-ldap-frontend.md) · backend : [gopass-auth-ldap-plan.md](../rawbank-backend/references/gopass-auth-ldap-plan.md)
+
 ## Code frontend complet (`mfa-requirements.ts`)
 
 ```typescript

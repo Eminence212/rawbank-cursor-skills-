@@ -32,6 +32,7 @@ Cible : `$HOME/.cursor/skills/rawbank-frontend/` (et `$HOME/.agents/skills/` si 
 | Pattern pages liste / formulaires | [gopass-pages-pattern.md](gopass-pages-pattern.md) |
 | Composants UI GO-PASS | [gopass-ui-components.md](gopass-ui-components.md) |
 | Auth JWT + MFA (code complet) | [gopass-lib-auth-mfa.md](gopass-lib-auth-mfa.md) |
+| LDAP/LDAPS — impact frontend (plan V30) | [gopass-auth-ldap-frontend.md](gopass-auth-ldap-frontend.md) |
 | Design system kiosk (tokens) | [digibranch-design-system.md](digibranch-design-system.md) |
 | Thème kiosk (`--kiosk-*`, CSS Modules) | [digibranch-theme-styles.md](digibranch-theme-styles.md) |
 | 79 composants kiosk (catalogue) | [digibranch-kiosk-components.md](digibranch-kiosk-components.md) |
@@ -53,6 +54,7 @@ Stack : React 19 · Mantine 7 · TanStack Query · `/api/v1`
 | Page liste CRUD | [gopass-pages-pattern.md](gopass-pages-pattern.md) |
 | Guards, badges, layout | [gopass-ui-components.md](gopass-ui-components.md) |
 | Login / MFA / RBAC UI | [gopass-lib-auth-mfa.md](gopass-lib-auth-mfa.md) |
+| LDAP/LDAPS (plan, login inchangé) | [gopass-auth-ldap-frontend.md](gopass-auth-ldap-frontend.md) |
 
 ### Digibranch Next (port 3000, cookie BFF)
 

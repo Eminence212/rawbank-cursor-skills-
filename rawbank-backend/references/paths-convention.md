@@ -31,6 +31,7 @@ Cible : `$HOME/.cursor/skills/rawbank-backend/`
 | Controllers, DTO, ApiResponse | [gopass-api-patterns.md](gopass-api-patterns.md) |
 | RBAC + scope ventes/stocks/appro | [gopass-rbac-scope.md](gopass-rbac-scope.md) |
 | Flyway V1–V29, matrice IAM | [gopass-migrations-rbac.md](gopass-migrations-rbac.md) |
+| LDAP/LDAPS + MFA (plan V30) | [gopass-auth-ldap-plan.md](gopass-auth-ldap-plan.md) |
 | Services métier + variables env | [gopass-services-env.md](gopass-services-env.md) |
 | Sécurité kiosk (filtres, headers) | [digibranch-security.md](digibranch-security.md) |
 | Endpoints `/kiosk/v1` + DTOs | [digibranch-api-endpoints.md](digibranch-api-endpoints.md) |
@@ -50,6 +51,7 @@ Cible : `$HOME/.cursor/skills/rawbank-backend/`
 | Permission + périmètre org | [gopass-rbac-scope.md](gopass-rbac-scope.md) + [gopass-migrations-rbac.md](gopass-migrations-rbac.md) |
 | Nouvelle migration Flyway | [gopass-migrations-rbac.md](gopass-migrations-rbac.md) |
 | Config Oracle, JWT, jobs | [gopass-services-env.md](gopass-services-env.md) |
+| Auth LDAP/LDAPS (plan) | [gopass-auth-ldap-plan.md](gopass-auth-ldap-plan.md) |
 
 ### Digibranch (`cd.rawbank.digibranch`, `/kiosk/v1`, cookie)
 
@@ -76,4 +78,4 @@ Cible : `$HOME/.cursor/skills/rawbank-backend/`
 1. **Lire la référence** avant d'implémenter — ne pas supposer l'existence de fichiers projet.
 2. **Liens autorisés** : uniquement `references/*.md` de ce skill ou `rawbank-frontend/references/*.md`.
 3. **Interdit** : chemins absolus, `gopass/backend/...`, `digibranch/backend/...`, `docs/...` comme source de doc.
-4. **Parité frontend** : codes `ERR-*` ↔ [digibranch-i18n-errors.md](../rawbank-frontend/references/digibranch-i18n-errors.md) ; MFA ↔ [gopass-lib-auth-mfa.md](../rawbank-frontend/references/gopass-lib-auth-mfa.md).
+4. **Parité frontend** : codes `ERR-*` ↔ [digibranch-i18n-errors.md](../rawbank-frontend/references/digibranch-i18n-errors.md) ; MFA ↔ [gopass-lib-auth-mfa.md](../rawbank-frontend/references/gopass-lib-auth-mfa.md) ; LDAP plan ↔ [gopass-auth-ldap-frontend.md](../rawbank-frontend/references/gopass-auth-ldap-frontend.md).

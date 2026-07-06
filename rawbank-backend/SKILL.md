@@ -72,7 +72,9 @@ Controller (api/) → Service (service/) → Repository → Oracle
 
 1. `POST /auth/login` → selon MFA : JWT direct, `/mfa` challenge, ou `/mfa/enroll` TOTP
 2. `POST /auth/mfa/verify` → tokens JWT
-3. Parité frontend : `User.requiresTotpEnrollment()` ↔ `lib/auth/mfa-requirements.ts`
+3. Parité frontend : `User.requiresTotpEnrollment()` ↔ `mfa-requirements.ts`
+
+**LDAP/LDAPS (livré V30–V31)** : bind annuaire remplace BCrypt au login — MFA inchangé. Voir [references/gopass-auth-ldap-plan.md](references/gopass-auth-ldap-plan.md).
 
 ### Migrations Flyway (V1–V29)
 
@@ -120,6 +122,7 @@ Controller (api/) → Service (service/) → Repository → Oracle
 - [references/gopass-rbac-scope.md](references/gopass-rbac-scope.md)
 - [references/gopass-migrations-rbac.md](references/gopass-migrations-rbac.md)
 - [references/gopass-services-env.md](references/gopass-services-env.md)
+- [references/gopass-auth-ldap-plan.md](references/gopass-auth-ldap-plan.md) — LDAP/LDAPS + MFA (plan V30)
 - [references/paths-convention.md](references/paths-convention.md)
 
 ---

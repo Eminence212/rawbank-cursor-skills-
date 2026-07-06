@@ -98,6 +98,10 @@ User admin seed : `admin@rawbank.local` / rôle ADMIN / org `org-economa`.
 | V27 | `stock:transfer` → rôles AGENCE + GUICHET |
 | V28 | `stock:receive` → rôle GUICHET |
 | V29 | Index partiel `uk_sales_unit_active` — revente après annulation |
+| **V30** | **Livré** : `auth_provider`, `ldap_username`, `password_hash` nullable |
+| **V31** | **Livré** : table `ldap_settings` (config serveur LDAP — UI admin) |
+
+**Règle** : jamais modifier une migration appliquée — créer V{n+1}.
 
 ## Ajouter une permission à un rôle (template V{n+1})
 
